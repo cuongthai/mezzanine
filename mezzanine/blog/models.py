@@ -50,7 +50,7 @@ class BlogPost(Displayable, Ownable, RichText, AdminThumbMixin):
         (year/month/day).
         """
         url_name = "blog_post_detail"
-        kwargs = {"post_id":self.id,"slug": self.slug}
+        kwargs = {"post_id": self.id,"slug": self.slug}
         date_parts = ("year", "month", "day")
         if settings.BLOG_URLS_DATE_FORMAT in date_parts:
             url_name = "blog_post_detail_%s" % settings.BLOG_URLS_DATE_FORMAT
